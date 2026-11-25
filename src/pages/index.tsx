@@ -20,7 +20,7 @@ export default function AcademyHome() {
               <div className="hero-actions"><Link className="button-primary" href="/guides">Explore the guides <span aria-hidden="true">↗</span></Link><Link className="button-secondary" href="/worksheet">Open chapter planner</Link></div>
               <div className="hero-meta"><span>SELF-GUIDED RESOURCES</span><span>BUILT FOR PRACTICE</span><span>NO ACCOUNT REQUIRED</span></div>
             </div>
-            <aside className="hero-index"><span>FIELD NOTES / 001</span><strong>STORY<br />IS A SERIES<br /><em>OF CHOICES.</em></strong><i>01 — 04 / LEARNING LIBRARY</i></aside>
+            <aside className="hero-index"><img className="hero-art-image" src="/academy-art.svg" alt="" /><span>FIELD NOTES / 001</span><strong>STORY<br />IS A SERIES<br /><em>OF CHOICES.</em></strong><i>01 — 04 / LEARNING LIBRARY</i></aside>
           </div>
         </section>
 
