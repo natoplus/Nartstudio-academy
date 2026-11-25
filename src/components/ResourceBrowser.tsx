@@ -58,6 +58,7 @@ export function ResourceBrowser({ heading = 'Find your next useful lesson.', sho
         <div className="guide-grid">
           {filteredGuides.map((guide) => (
             <Link className="guide-card" href={`/guides/${guide.slug}`} key={guide.slug}>
+              <img className="guide-card-image" src={guide.image} alt="" loading="lazy" />
               <span className="resource-card-meta">{guide.category} <span aria-hidden="true">·</span> {guide.readTime} read</span>
               <h3>{guide.title}</h3>
               <p>{guide.summary}</p>

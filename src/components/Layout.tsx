@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import ParallaxAtmosphere from './ParallaxAtmosphere'
+import ScrollReveal from './ScrollReveal'
 
 export function Layout({ children }: { children: ReactNode }) {
   return <>
     <ParallaxAtmosphere />
+    <ScrollReveal />
     <a className="skip-link" href="#main-content">Skip to content</a>
     <header className="site-header">
       <Link href="/" className="brand" aria-label="Pylothouse Creator Academy home"><span className="brand-mark"><img src="/brand-mark.svg" alt="" /></span><span>PYLOTHOUSE <b>ACADEMY</b></span></Link>

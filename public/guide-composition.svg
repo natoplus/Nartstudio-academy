@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" fill="none">
+  <defs><linearGradient id="bg" x1="38" y1="25" x2="715" y2="347" gradientUnits="userSpaceOnUse"><stop stop-color="#ADBBDA"/><stop offset="1" stop-color="#EDE8F5"/></linearGradient></defs>
+  <rect width="760" height="360" rx="26" fill="url(#bg)"/>
+  <rect x="130" y="57" width="500" height="246" rx="17" fill="#fff" fill-opacity=".92"/>
+  <rect x="151" y="79" width="281" height="119" rx="10" fill="#3D52A0"/>
+  <rect x="443" y="79" width="165" height="119" rx="10" fill="#7091E6"/>
+  <rect x="151" y="209" width="161" height="73" rx="10" fill="#8697C4"/>
+  <rect x="322" y="209" width="286" height="73" rx="10" fill="#EDE8F5"/>
+  <path d="M184 171c51-46 95-42 133-9 32 28 63 30 93 9m47-46c37-28 79-31 125-4M181 251h92m75 0h210" stroke="#EDE8F5" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="308" cy="115" r="12" fill="#7091E6"/><circle cx="539" cy="121" r="12" fill="#3D52A0"/>
+  <path d="m115 85 10 24 24 10-24 10-10 24-10-24-24-10 24-10 10-24Z" fill="#3D52A0"/>
+  <path d="m650 214 8 19 20 8-20 8-8 20-8-20-20-8 20-8 8-19Z" fill="#7091E6"/>
+</svg>

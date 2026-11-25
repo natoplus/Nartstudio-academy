@@ -28,7 +28,7 @@ export default function AcademyHome() {
 
         <section className="section tracks-section" id="tracks">
           <div className="section-heading"><div><p className="eyebrow">LEARNING PATHS</p><h2>Choose what to practice next.</h2></div><p>Each path connects practical resources you can use independently. Move through them in order or jump to the skill you need today.</p></div>
-          <div className="track-list">{tracks.map(track => <Link href={`/tracks/${track.slug}`} key={track.slug}><span>{track.number}</span><div><h3>{track.title}</h3><p>{track.summary}</p></div><small>SELF-PACED MAP <b aria-hidden="true">↗</b></small></Link>)}</div>
+          <div className="track-list">{tracks.map(track => <Link href={`/tracks/${track.slug}`} key={track.slug}><img className="track-list-image" src={track.image} alt="" loading="lazy" /><span>{track.number}</span><div><h3>{track.title}</h3><p>{track.summary}</p></div><small>SELF-PACED MAP <b aria-hidden="true">↗</b></small></Link>)}</div>
         </section>
 
         <section className="tool-banner"><div><p className="eyebrow">A TOOL FOR YOUR NEXT SESSION</p><h2>Give your next chapter<br />a clear shape.</h2><p>Use the chapter planner to set a reader question, turning point and page-by-page beats. Your draft stays in this browser.</p></div><Link className="button-primary" href="/worksheet">Open the planner <span aria-hidden="true">↗</span></Link></section>
