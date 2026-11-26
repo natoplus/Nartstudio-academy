@@ -169,15 +169,18 @@ body{background:linear-gradient(145deg,#f8f2e7 0%,#eee5d9 47%,#f8f0e2 100%);colo
 .article-end{background:rgba(76,113,90,.08)}
 .parallax-atmosphere{position:fixed;z-index:0;inset:0;overflow:hidden;pointer-events:none}
 .site-header,main,.site-footer{position:relative;z-index:1}
-.parallax-atmosphere span{position:absolute;display:block;width:34vw;height:34vw;min-width:220px;min-height:220px;border-radius:50%;filter:blur(12px);opacity:.2;will-change:transform}
-.parallax-atmosphere span:nth-child(1){top:9%;right:-8%;background:radial-gradient(circle,#7091E6 0%,rgba(112,145,230,0) 69%)}
-.parallax-atmosphere span:nth-child(2){top:48%;left:-12%;background:radial-gradient(circle,#8697C4 0%,rgba(134,151,196,0) 70%)}
-.parallax-atmosphere span:nth-child(3){top:76%;right:13%;width:22vw;height:22vw;background:radial-gradient(circle,#ADBBDA 0%,rgba(173,187,218,0) 68%)}
+.parallax-atmosphere span[data-depth]{position:absolute;display:block;width:34vw;height:34vw;min-width:220px;min-height:220px;border-radius:50%;filter:blur(12px);opacity:.2;will-change:transform}
+.parallax-atmosphere span[data-depth="-0.12"]{top:9%;right:-8%;background:radial-gradient(circle,#7091E6 0%,rgba(112,145,230,0) 69%)}
+.parallax-atmosphere span[data-depth="0.08"]{top:48%;left:-12%;background:radial-gradient(circle,#8697C4 0%,rgba(134,151,196,0) 70%)}
+.parallax-atmosphere span[data-depth="-0.2"]{top:76%;right:13%;width:22vw;height:22vw;background:radial-gradient(circle,#ADBBDA 0%,rgba(173,187,218,0) 68%)}
+.parallax-atmosphere .atmosphere-particle{position:absolute;width:2px;height:2px;border-radius:50%;background:var(--blue,#7091E6);box-shadow:0 0 8px 2px rgba(112,145,230,.65);opacity:0;animation:academy-particle-flicker 7s ease-in-out infinite;will-change:opacity,transform}
 .hero-copy,.hero-index{animation:academy-arrive .8s cubic-bezier(.2,.7,.25,1) both}
 .guide-card,.track-list>a,.featured-guide{transition:transform .35s ease,box-shadow .35s ease,border-color .25s ease}
 .guide-card:hover,.track-list>a:hover,.featured-guide:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(62,41,52,.09)}
 @keyframes academy-arrive{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:760px){.hero-art-image{width:75%;opacity:.55}.parallax-atmosphere span{width:65vw;height:65vw}}
+@keyframes academy-particle-flicker{0%,100%{opacity:0;transform:translateY(0) scale(.5)}18%,35%{opacity:.9;transform:translateY(-5px) scale(1)}55%{opacity:.35;transform:translateY(-8px) scale(.75)}75%{opacity:0;transform:translateY(-10px) scale(.4)}}
+@media(max-width:760px){.hero-art-image{width:75%;opacity:.55}.parallax-atmosphere span[data-depth]{width:65vw;height:65vw}}
+@media(prefers-reduced-motion:reduce){.parallax-atmosphere .atmosphere-particle{animation:none;opacity:0}}
 
 :root{color-scheme:light;--bg:#EDE8F5;--surface:#fff;--line:#ADBBDA;--text:#3D52A0;--muted:#53679F;--green:#3D52A0;--ruby:#8697C4;--blue:#7091E6}
 body{background:#EDE8F5;color:var(--text);font-family:'Space Grotesk',sans-serif;line-height:1.6}

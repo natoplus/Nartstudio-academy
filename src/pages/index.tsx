@@ -19,7 +19,7 @@ export default function AcademyHome() {
               <p className="eyebrow"><span /> NARTSTUDIO CREATIVE ACADEMY</p>
               <h1>Learn the craft<br /><em>by making.</em></h1>
               <p className="lede">Build practical skills in illustration, storytelling, design and creative work. Made for aspiring artists and independent creatives—from Pylothouse storytellers to wherever your ideas lead.</p>
-              <div className="hero-actions"><Link className="button-primary" href="/courses">Explore 20 courses <span aria-hidden="true">↓</span></Link><Link className="button-secondary" href="/tracks">View learning paths</Link></div>
+              <div className="hero-actions"><Link className="button-primary" href="/courses">Explore 20 courses <span aria-hidden="true">↓</span></Link><Link className="button-secondary" href="/tracks">View learning paths</Link><Link className="button-secondary" href="/sign-up">Join the Academy <span aria-hidden="true">↗</span></Link></div>
               <div className="hero-meta"><span>10 FREE MINI-COURSES</span><span>SELF-PACED PRACTICE</span><span>FOR EVERY CREATIVE</span></div>
             </div>
             <aside className="hero-index"><img className="hero-art-image" src="/academy-art.svg" alt="" /><span>YOUR NEXT PROJECT STARTS HERE</span><strong>MAKE<br /><em>STORIES.</em></strong><i>GUIDES · PATHS · TOOLS</i></aside>

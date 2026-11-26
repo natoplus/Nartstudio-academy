@@ -24,5 +24,23 @@ export default function ParallaxAtmosphere() {
     }
   }, [])
 
-  return <div ref={scene} className="parallax-atmosphere" aria-hidden="true"><span data-depth="-0.12" /><span data-depth="0.08" /><span data-depth="-0.2" /></div>
+  return (
+    <div ref={scene} className="parallax-atmosphere" aria-hidden="true">
+      <span data-depth="-0.12" />
+      <span data-depth="0.08" />
+      <span data-depth="-0.2" />
+      {Array.from({ length: 28 }, (_, index) => (
+        <span
+          className="atmosphere-particle"
+          key={index}
+          style={{
+            left: `${(index * 37) % 100}%`,
+            top: `${(index * 53) % 100}%`,
+            animationDelay: `${(index % 10) * -0.8}s`,
+            animationDuration: `${5 + (index % 5)}s`,
+          }}
+        />
+      ))}
+    </div>
+  )
 }

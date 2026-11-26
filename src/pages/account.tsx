@@ -86,8 +86,9 @@ export default function AccountPage() {
         {authError && <p className="data-message data-error" role="alert">{authError}</p>}
         {!loading && !user && hasSupabaseConfig && (
           <div className="form-panel">
-            <p>Sign in to see progress saved to your account.</p>
-            <Link className="button button-primary" href="/sign-in">Sign in or create a free account</Link>
+            <p>Create a free account and confirm your email before signing in to save course progress.</p>
+            <Link className="button button-primary" href="/sign-up">Create a free account</Link>
+            <Link className="under-link" href="/sign-in">Already have an account? Sign in ↗</Link>
           </div>
         )}
         {user && (

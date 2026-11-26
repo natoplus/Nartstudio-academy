@@ -7,7 +7,7 @@ Self-paced creative learning for aspiring artists, illustrators, storytellers, d
 - `/` - Academy overview, guides, featured courses and plans
 - `/courses` and `/courses/[slug]` - searchable course library and lessons
 - `/plans` - free and proposed Premium plans
-- `/sign-in` and `/account` - email-link authentication and saved progress
+- `/sign-up`, `/sign-in` and `/account` - email-confirmed password accounts and saved progress
 - `/mentorship` - private, authenticated mentorship requests
 - `/guides` and `/guides/[slug]` - practical creator guides
 - `/tracks` and `/tracks/[slug]` - self-paced learning paths
@@ -18,7 +18,7 @@ Self-paced creative learning for aspiring artists, illustrators, storytellers, d
 1. Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from the existing Nartstudio Supabase project. The browser anon/publishable key is expected to be public; **never put a service-role key in this app or any `NEXT_PUBLIC_` variable**.
 2. In the Supabase SQL Editor, run `../supabase/migrations/20261126183400_academy_learning_platform.sql` from the workspace root.
 3. Then run `../supabase/seeds/academy-courses.sql`. It adds 20 original, structured courses (10 complete free mini-courses and 10 premium full courses), further-reading links, local procedural artwork seeds, and plan details. The seed can be run again safely.
-4. In Supabase Auth URL Configuration, allow the Academy's local and deployed URLs with `/account` as the email redirect destination.
+4. In Supabase Auth settings, enable email confirmations for the Email provider. In URL Configuration, allow the Academy's local and deployed URLs, including `/sign-in?confirmed=1` as the email confirmation redirect destination.
 5. Install and start the Academy:
 
 ```bash
